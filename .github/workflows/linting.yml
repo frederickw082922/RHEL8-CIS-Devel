@@ -16,3 +16,26 @@ jobs:
         uses: robertdebock/molecule-action@5.0.2
         with:
           command: lint
+  test:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        image:
+          - alpine
+          - amazonlinux
+          - debian
+          - centos
+          - fedora
+          - opensuse
+          - ubuntu
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          path: "${{ github.repository }}"
+      - name: molecule
+        uses: robertdebock/molecule-action@5.0.2
+        with:
+          image: "${{ matrix.image }}"
+          options: parallel
+          scenario: my_specific_scenario
