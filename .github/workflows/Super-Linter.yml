@@ -1,4 +1,4 @@
-name: Lint Code Base
+name: Super-Linter Code Base
 
 on: [push, pull_request]
 
@@ -19,4 +19,6 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_JAVASCRIPT_ES: false
+          VALIDATE_MARKDOWN: false
+          IGNORE_GITIGNORED_FILES: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
