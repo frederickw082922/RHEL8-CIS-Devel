@@ -8,5 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: "${{ github.repository }}"
+          path: frederickw082922/RHEL8-CIS-Devel
       - uses: gofrolist/molecule-action@v2
