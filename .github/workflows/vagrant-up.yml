@@ -27,9 +27,6 @@ jobs:
 
       - name: Show Vagrant version
         run: vagrant --version
-
-      - name: Copy SSH Key
-        run: ssh-copy-id localhost
         
       - name: Run vagrant up
         run: vagrant up
