@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         distro:
-          - centos8
+          - geerlingguy/docker-centos8-ansible:latest
 
     steps:
       - name: Check out the codebase.
