@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-    config.vm.box = "mindpointgroup/rocky8-bios"
+    config.vm.box = "mindpointgroup/redhat8-efi"
 
     config.vm.define 'rocky8-bios'
 
