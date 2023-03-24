@@ -27,7 +27,10 @@ jobs:
 
       - name: Show Vagrant version
         run: vagrant --version
-        
+     
+      - name: Create SSH Key
+        run: ssh-keygen -y -f
+
       - name: Copy SSH Key
         run: ssh-copy-id localhost
         
