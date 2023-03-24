@@ -33,3 +33,6 @@ jobs:
 
       - name: ssh into box after boot
         run: vagrant ssh -c "echo 'hello world!'"
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
