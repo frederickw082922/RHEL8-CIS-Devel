@@ -1,8 +1,8 @@
 Vagrant.configure("2") do |config|
-    config.vm.box = "geerlingguy/centos7"
+    config.vm.box = "mindpointgroup/rocky8-bios"
     config.ssh.username = 'vagrant'
     config.ssh.password = 'vagrant'    
-    config.vm.define 'centos7'
+    config.vm.define 'rocky8-bios'
     config.vm.box_version = "1.0.0"
     config.ssh.insert_key = true
     config.vm.network :forwarded_port, guest: 22, host: 2222, id: "ssh", auto_correct:true
